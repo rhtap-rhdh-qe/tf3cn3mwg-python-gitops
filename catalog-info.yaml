@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: tf3cn3mwg-python-gitops
+  description: This is GitOps manifest for tf3cn3mwg-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: tf3cn3mwg-python
+    janus-idp.io/tekton: tf3cn3mwg-python 
+    backstage.io/kubernetes-id: tf3cn3mwg-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:tf3cn3mwg-python
